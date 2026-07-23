@@ -956,36 +956,3 @@ body.light-mode textarea{
 }
 /* ===== MOBILE FIX ===== */
 
-html,
-body{
-    overflow-x:hidden !important;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-.navbar,
-.hero,
-.services,
-.doctors,
-.gallery,
-.contact,
-.why-us,
-.footer,
-.stats,
-.testimonials,
-.faq{
-    width:100%;
-    overflow-x:hidden;
-}
-
-.hero-buttons,
-.doctor-buttons{
-    flex-wrap:wrap;
-}
-
-button{
-    max-width:100%;
-}
