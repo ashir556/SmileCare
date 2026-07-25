@@ -181,3 +181,13 @@ themeToggle.addEventListener("click", () => {
     }
 
 });
+// ================= MOBILE MENU =================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector(".nav-links");
+const appointmentBtn = document.querySelector(".appointment-btn");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    appointmentBtn.classList.toggle("active");
+});
