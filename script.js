@@ -190,3 +190,28 @@ if (menuToggle && navMenu) {
         menuToggle.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
     });
 }
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+
+if (menuToggle && navMenu && menuOverlay) {
+
+    menuToggle.addEventListener("click", () => {
+
+        navMenu.classList.toggle("active");
+        menuOverlay.classList.toggle("active");
+
+        menuToggle.textContent =
+            navMenu.classList.contains("active") ? "✕" : "☰";
+
+    });
+
+    menuOverlay.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+        menuToggle.textContent = "☰";
+
+    });
+
+}

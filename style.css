@@ -957,7 +957,11 @@ body.light-mode textarea{
 /* ================= RESPONSIVE NAVBAR ================= */
 
 .navbar{
-    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:20px;
+    padding:20px;
 }
 
 .menu-toggle{
@@ -992,18 +996,41 @@ body.light-mode textarea{
     }
 
     .nav-menu{
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#0b1324;
-        padding:25px;
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-        z-index:1000;
-    }
+    position:fixed;
+    top:0;
+    left:-280px;
+    width:280px;
+    height:100vh;
+    background:#0b1324;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:90px 30px 30px;
+    gap:30px;
+    transition:left .35s ease;
+    z-index:1001;
+}
+
+.nav-menu.active{
+    left:0;
+}
+
+.nav-links{
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:25px;
+}
+
+.nav-actions{
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.appointment-btn{
+    width:100%;
+}
 
     .nav-menu.active{
         display:flex;
@@ -1024,4 +1051,23 @@ body.light-mode textarea{
         width:100%;
         max-width:300px;
     }
+}
+/* Sidebar Overlay */
+
+.menu-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.5);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:1000;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
 }
