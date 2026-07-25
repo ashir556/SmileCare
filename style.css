@@ -184,6 +184,28 @@ body{
     .hero{
         flex-direction:column;
         text-align:center;
+        padding:40px 20px;
+        gap:30px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-image{
+        width:100%;
+        max-width:350px;
+        height:auto;
     }
 
     .hero-buttons{
@@ -191,38 +213,11 @@ body{
         flex-wrap:wrap;
     }
 
-    .hero h1{
-        font-size:44px;
-    }
-
     .floating-card{
         position:static;
-        margin-top:20px;
+        margin:20px auto 0;
+        max-width:220px;
     }
-}
-
-.services{
-    padding:100px 10%;
-    text-align:center;
-}
-
-.services h2{
-    font-size:48px;
-    margin-bottom:20px;
-}
-
-.section-text{
-    max-width:700px;
-    margin:auto;
-    color:#cbd5e1;
-    line-height:1.8;
-    margin-bottom:60px;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
 }
 
 .card{
@@ -1085,27 +1080,4 @@ body.light-mode textarea{
 .menu-overlay.active{
     opacity:1;
     visibility:visible;
-}
-@media (max-width:768px){
-
-    .hero-right{
-        width:100%;
-        overflow:hidden;
-    }
-
-    .hero-image{
-        width:100%;
-        max-width:100%;
-        height:auto;
-    }
-
-    .floating-card{
-        left:0;
-        right:0;
-        margin:auto;
-        bottom:15px;
-        max-width:220px;
-        text-align:center;
-    }
-
 }
