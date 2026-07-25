@@ -181,15 +181,7 @@ themeToggle.addEventListener("click", () => {
     }
 
 });
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
 
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        menuToggle.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
-    });
-}
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 const menuOverlay = document.getElementById("menuOverlay");
