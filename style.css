@@ -954,5 +954,30 @@ body.light-mode textarea{
     }
 
 }
+/* ================= MOBILE RESPONSIVE ================= */
 
+@media (max-width: 768px) {
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .appointment-btn{
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .theme-toggle{
+        margin-top: 10px;
+    }
+
+}
 
