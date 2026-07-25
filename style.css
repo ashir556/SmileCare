@@ -86,7 +86,10 @@ body{
     border-radius:30px;
     box-shadow:0 25px 60px rgba(37,99,235,.35);
     transition:.4s;
+
+    display:block;
 }
+
 
 .hero-image:hover{
     transform:scale(1.03);
@@ -107,7 +110,19 @@ body{
     line-height:1.1;
     margin-bottom:25px;
 }
+@media (max-width:768px){
 
+    .hero h1{
+        font-size:36px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+}
 .hero p{
     font-size:20px;
     color:#cbd5e1;
@@ -1070,4 +1085,27 @@ body.light-mode textarea{
 .menu-overlay.active{
     opacity:1;
     visibility:visible;
+}
+@media (max-width:768px){
+
+    .hero-right{
+        width:100%;
+        overflow:hidden;
+    }
+
+    .hero-image{
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+
+    .floating-card{
+        left:0;
+        right:0;
+        margin:auto;
+        bottom:15px;
+        max-width:220px;
+        text-align:center;
+    }
+
 }
