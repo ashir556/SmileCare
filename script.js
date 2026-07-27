@@ -15,12 +15,6 @@ document.querySelectorAll("a, button").forEach(item => {
             return;
         }
 
-        if(
-            item.classList.contains("menu-btn")
-        ){
-            return;
-        }
-
         e.preventDefault();
 
         popup.classList.add("active");
