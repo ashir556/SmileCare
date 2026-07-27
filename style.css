@@ -903,3 +903,65 @@ section::after{
         grid-template-columns:repeat(3,1fr);
     }
 }
+/* ===============================
+   PORTFOLIO POPUP
+================================ */
+
+.portfolio-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:20px;
+}
+
+.portfolio-popup.active{
+    display:flex;
+}
+
+.popup-box{
+    background:#0f1d31;
+    max-width:520px;
+    width:100%;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.1);
+    position:relative;
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.popup-box h2{
+    margin-bottom:20px;
+}
+
+.popup-box p{
+    color:#cbd5e1;
+    margin-bottom:18px;
+    line-height:1.7;
+}
+
+.popup-close{
+    position:absolute;
+    top:18px;
+    right:22px;
+    font-size:30px;
+    cursor:pointer;
+}
