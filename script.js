@@ -1,1 +1,3 @@
-alert("JavaScript is working!");
+const popup = document.getElementById("portfolioPopup");
+
+alert(popup);
