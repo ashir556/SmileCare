@@ -1,69 +1,44 @@
-// ======================
+// ==========================
 // MOBILE MENU
-// ======================
+// ==========================
 
 const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelector(".nav-links");
 
-if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+if(menuBtn){
+
+    menuBtn.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("show");
+
     });
+
 }
 
-// ======================
-// PORTFOLIO POPUP
-// ======================
+// ==========================
+// SCROLL REVEAL
+// ==========================
 
-const popup = document.getElementById("portfolioPopup");
-const closePopup = document.getElementById("closePopup");
-const popupOk = document.getElementById("popupOk");
+const reveals=document.querySelectorAll(".reveal");
 
-// Select every link and button except popup controls
-const buttons = document.querySelectorAll("a, button");
+function revealSections(){
 
-buttons.forEach(btn => {
+    reveals.forEach(section=>{
 
-    btn.addEventListener("click", function (e) {
+        const top=section.getBoundingClientRect().top;
 
-        // Ignore popup close buttons
-        if (
-            btn.id === "closePopup" ||
-            btn.id === "popupOk"
-        ) {
-            return;
-        }
+        const windowHeight=window.innerHeight;
 
-        // Stop link from jumping to top
-        e.preventDefault();
+        if(top<windowHeight-120){
 
-        // Show popup
-        if (popup) {
-            popup.classList.add("active");
+            section.classList.add("active");
+
         }
 
     });
 
-});
-
-// Close popup
-if (closePopup) {
-    closePopup.addEventListener("click", () => {
-        popup.classList.remove("active");
-    });
 }
 
-if (popupOk) {
-    popupOk.addEventListener("click", () => {
-        popup.classList.remove("active");
-    });
-}
+window.addEventListener("scroll",revealSections);
 
-// Close when clicking outside
-if (popup) {
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-            popup.classList.remove("active");
-        }
-    });
-}
+revealSections();
